@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url(../assets/icons/bg-pattern-desktop.svg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 541px) {
+  body {
+    background-size: cover;
+  }
+}
+.main-wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: 12vh 35vh auto;
+}
+
+.logo {
+  grid-row: 1/2;
+}
+
+.logo__img {
+  width: 35vw;
+  height: 4vh;
+}
+
+.hero {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__bg {
+  background-image: url(../assets/imgs/hero-mobile.jpg);
+  background-size: cover;
+}
+
+.sign-up {
+  grid-row: 3/4;
+  padding: 30px 25px;
+}
+
+.sign-up__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.sign-up__title {
+  font-size: 3rem;
+}
+
+.sign-up__description {
+  width: auto;
+  font-size: 1.4rem;
+}
+
+.sign-up__form {
+  width: 100%;
+}
+
+#user-email {
+  width: 100%;
+}
+
+.submit-btn {
+  right: 0;
+  width: 20%;
+}
+
+.error-icon {
+  right: 22%;
+}
+
+.email-advice--error {
+  margin: 0;
+}
+
+/*# sourceMappingURL=mobile.css.map */

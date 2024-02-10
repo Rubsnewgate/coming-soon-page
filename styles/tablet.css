@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-image: url(../assets/icons/bg-pattern-desktop.svg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 541px) {
+  body {
+    background-size: cover;
+  }
+}
+.logo__img {
+  margin-left: 5vw;
+  width: 20vw;
+}
+
+.sign-up {
+  padding-left: 5vw;
+}
+
+.submit-btn {
+  width: 20%;
+}
+
+.error-icon {
+  right: 35%;
+}
+
+/*# sourceMappingURL=tablet.css.map */
