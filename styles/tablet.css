@@ -27,12 +27,21 @@ body {
   padding-left: 5vw;
 }
 
+#user-email {
+  width: 85%;
+}
+
 .submit-btn {
+  right: 10%;
   width: 20%;
 }
 
 .error-icon {
-  right: 35%;
+  right: 31%;
+}
+
+.hero__bg {
+  background-position: center;
 }
 
 /*# sourceMappingURL=tablet.css.map */

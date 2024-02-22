@@ -9,11 +9,20 @@
 .sign-up {
 	padding-left: 5vw;
 }
+#user-email {
+	width: 85%;
+}
 .submit-btn {
+	right: 10%;
 	width: 20%;
 }
 
 // Error Email Advice
 .error-icon {
-	right: calc(35%);
+	right: calc(31%);
+}
+
+// Hero Section
+.hero__bg {
+	background-position: center;
 }
