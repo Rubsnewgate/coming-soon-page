@@ -38,6 +38,7 @@
 .sign-up__title {
 	margin: 0;
 	font-size: $lg-size;
+	color: $dark-grayish-red;
 	line-height: 1.1;
 	letter-spacing: 2rem;
 	text-transform: uppercase;
@@ -60,7 +61,7 @@
 	height: 55px;
 }
 #user-email {
-	width: 80%;
+	width: 70%;
 	height: 85%;
 	padding: 10px 25px;
 	font-size: $sm-size;
@@ -80,8 +81,8 @@
 }
 .submit-btn {
 	position: absolute;
-	right: 50px;
-	width: 18%;
+	right: 20%;
+	width: 20%;
 	height: 85%;
 	padding: 10px;
 	font-size: $md-size;
