@@ -1,17 +1,22 @@
-const SUBMIT_BTN = document.querySelector('.submit-btn')
+const domElements = {
+	submitBtn: document.querySelector('.submit-btn'),
+    emailInput: document.querySelector('#user-email'),
+    errorIcon: document.querySelector('.error-icon'),
+    errorAdvice: document.querySelector('.email-advice--error'),
+}
 
-SUBMIT_BTN.addEventListener('click', (event) => {
+domElements.submitBtn.addEventListener('click', (event) => {
 	event.preventDefault()
 
-	let email = document.querySelector('#user-email').value
-	let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+	const email = domElements.emailInput.value
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 	if (!emailPattern.test(email)) {
-		document.querySelector('.error-icon').style.display = 'block'
-		document.querySelector('.email-advice--error').style.display = 'inline'
+		domElements.errorIcon.style.display = 'block'
+		domElements.errorAdvice.style.display = 'inline'
 	}
 	else {
-		document.querySelector('.error-icon').style.display = 'none'
-		document.querySelector('.email-advice--error').style.display = 'none'
+		domElements.errorIcon.style.display = 'none'
+		domElements.errorAdvice.style.display = 'none'
 	}
 })
