@@ -1,7 +1,7 @@
 @use 'guide.sass'
 
-// Main Container
-.main-wrapper
+// Main container
+.main
 	width: 100%
 	height: 100%
 	display: grid
@@ -9,36 +9,29 @@
 	grid-template-rows: 1fr 3fr
 	font-family: guide.$primary-font
 
-// Logo And Sign Up Sections
+// Logo and sign up sections
 .logo
+	@include guide.flexbox(row, null, center, null)
 	grid-column: 1 / 2
 	grid-row: 1 / 2
 
-.logo__container
-	@include guide.flexbox(row, null, center, null)
-	width: 100%
-	height: 100%
-
-.logo__img
-	width: 12vw
-	height: 5vh
-	margin-left: 10vw
+	& img
+		width: 12vw
+		height: 5vh
+		margin-inline-start: 10vw
 
 .sign-up
+	@include guide.flexbox(column, start, start, 30px)
 	grid-column: 1 / 2
 	grid-row: 2 / 3
 	padding-left: 10vw
-
-.sign-up__container
-	@include guide.flexbox(column, start, start, 30px)
-	height: 100%
 
 .sign-up__title
 	margin: 0
 	font-size: guide.$lg-size
 	color: guide.$dark-grayish-red
 	line-height: 1.1
-	letter-spacing: 2rem
+	letter-spacing: 1.25rem
 	text-transform: uppercase
 	span
 		font-weight: guide.$light
@@ -50,7 +43,6 @@
 	font-size: guide.$sm-size
 	font-weight: guide.$semi-bold
 	color: guide.$desaturated-red
-	line-height: 1.5
 
 .sign-up__form
 	position: relative
@@ -66,10 +58,12 @@
 	color: guide.$desaturated-red
 	border: 1px solid lightgray
 	border-radius: 30px
+
 	&::placeholder
 		font-size: guide.$sm-size
 		font-weight: guide.$normal
 		color: guide.$desaturated-red
+
 	&:focus
 		border: 2px solid guide.$desaturated-red
 		outline: none
@@ -85,11 +79,22 @@
 	color: guide.$white
 	border: none
 	border-radius: 30px
+
 	&:hover
 		cursor: pointer
 		box-shadow: 0 10px 10px hsla(0, 36%, 70%, 0.4)
 
-// Error Email Advice
+// Hero
+.hero
+	grid-column: 2 / 3
+	grid-row: 1 / 3
+	width: 100%
+	height: 100%
+	background-image: url(../assets/img/hero-desktop.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+
+// Error email advice
 .error-icon
 	display: none
 	position: absolute
@@ -101,15 +106,3 @@
 	margin: 0 0 0 20px
 	font-size: guide.$sm-size
 	color: guide.$soft-red
-
-// Hero Section
-.hero
-	grid-column: 2 / 3
-	grid-row: 1 / 3
-
-.hero__bg
-	width: 100%
-	height: 100%
-	background-image: url(../assets/imgs/hero-desktop.jpg)
-	background-repeat: no-repeat
-	background-size: cover

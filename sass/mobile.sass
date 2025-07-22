@@ -1,44 +1,40 @@
 @use 'guide.sass'
 
-// Main Container
-.main-wrapper
+// Main container
+.main
 	grid-template-columns: 1fr
 	grid-template-rows: 12vh 35vh auto
 
-// Logo Section
+// Logo
 .logo
 	grid-row: 1 / 2
 
-.logo__img
-	width: 35vw
-	height: 4vh
+	& img
+		width: 35vw
+		height: 4vh
+		margin-inline-start: 5vw
 
-// Hero Section
+// Hero
 .hero
 	grid-column: 1 / 2
 	grid-row: 2 / 3
 	width: 100%
 	height: 100%
-
-.hero__bg
-	background-image: url(../assets/imgs/hero-mobile.jpg)
+	background-image: url(../assets/img/hero-mobile.jpg)
 	background-size: cover
 
 // Sign Up Section
 .sign-up
+	@include guide.flexbox(column, center, center, 20px)
 	grid-row: 3 / 4
 	padding: 30px 25px
-
-.sign-up__container
-	@include guide.flexbox(column, center, center, 20px)
 	text-align: center
 
 .sign-up__title
-	font-size: 3rem
+	font-size: 1.75rem
 
 .sign-up__description
 	width: auto
-	font-size: 1.4rem
 
 .sign-up__form
 	width: 100%
@@ -50,7 +46,7 @@
 	right: 0
 	width: 25%
 
-// Error Email Advice
+// Error email advice
 .error-icon
 	right: calc(26%)
 
